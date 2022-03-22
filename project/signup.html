@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>
+        SignUp
+    </title>
+    <link rel="stylesheet" href="css/inf.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7f6d91d128.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="upperbar">
+            <div id="navpic">
+                <h1>LMS-PORTAL</h1>
+            </div>
+            <div id="links">
+                <a href="intro.html">Home</a>
+				<a href="signinpage.html">SignIn</a>
+                <a href="signup.html">SignUp</a>
+                <a href="contactus.html">Contact</a>
+				 <a href="info.html">About</a>
+            </div>
+
+
+        </div>
+        <div id="headings">
+            <h1>
+                Sign Up
+            </h1>
+        </div>
+    </nav>
+	
+	<div class="signupform">
+        <div class="signupformheader">
+            <h1>
+                Enter your Details to create account
+            </h1>
+        </div>
+
+        <div class="signupformdata">
+            <form action="signingup.php" method= "post">
+				<h3>Name</h3>
+                <input type="text" id="name" name="name" placeholder="Name here" required pattern="[a-zA-Z\s]{1,20}" >
+				<br>
+				<br>
+                <h3>phone no</h3>
+                <input type="tel" id="phoneno" name="phoneno" placeholder="123-45-678" required pattern="[0-9+]{1,15}">
+                <br><br>
+                <h3>gender</h3>
+                <input type="radio" name="gender" value="male" required > Male<br>
+                <input type="radio" name="gender" value="female" required> Female<br>
+				<br>
+				<br>
+                <h3>cnic</h3>
+                <input type="text" id="cnic" name="cnic" placeholder="36302-67694737" required pattern="[0-9]{1,20}">
+                <br>
+				<br>
+                <h3>date of birth</h3>
+                <input type="date" id="birthday" name="birthday" required>
+                <br>
+				<br>
+                <h3>Father Name</h3>
+                <input type="text" id="fathername" name="fathername" placeholder="Name here" required pattern="[a-zA-Z\s]{1,20}"  >
+				<br>
+				<br>
+                <h3>ADDRESS</h3>
+                <input type="text" id="address" name="address" placeholder="address" required>
+                <br><br>
+                
+                <h3>password</h3>
+                <input type="password" id="pwd" name="pwd" required pattern="[0-9+]{1,15}">
+                <br>
+                <br>
+                <h3>registration type</h3>
+               
+                <select name="user" id="user">
+                    <option value="Teacher">teacher</option>
+                    <option value="Student">Student</option>
+                  </select>
+                <br><br>
+                <button type="submit" name="submit" > Submit</button>
+                
+            </form>
+			
+            <div class="signuptextbox">
+                
+                
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="signupdesigningbutton">
+
+        <div class="signupdesigningbuttondata">
+            <h1>
+               Feel Free to Contact
+            </h1>
+            <p>
+                If you are having a Problem? Contact Any time to E-Learning-Portal
+				Our team will respond you soon on your email.
+            </p>
+
+            <div class="signupclickbutton">
+                <button>
+					         <a href="contactus.html">TAKE ME TO CONTACT PAGE</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

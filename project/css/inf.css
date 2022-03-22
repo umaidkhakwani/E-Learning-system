@@ -1,0 +1,535 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background-color: #3FD2C7;
+    padding: 10px;
+    width: 100%;
+}
+
+.upperbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navpic {
+    font-size: 30px;
+    color: white;
+}
+
+#links a {
+    float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  
+}
+#links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navtext {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+}
+
+#navtext h1 {
+    padding-top: 100px;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+}
+
+#navtext p {
+    padding-top: 30px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+#navtext #butt button {
+    position: relative;
+    top: 15px;
+    left: 45%;
+    border-color: white;
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    border-radius: 2px;
+    padding: 6px 6px;
+    margin-bottom: 150px;
+}
+
+.indexcenterdata {
+    widows: 100%;
+    background-color: ivory;
+    padding-top: 70px;
+	padding-bottom: 90px;
+}
+
+.indexcenterdata .indexcenteredpicture {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.indexcenterdata .indexcenteredpicture .indeximagesidetext {
+    text-align: left;
+    padding: 30px;
+}
+
+.indexcenterdata .indexcenteredpicture .intropic {
+    margin: 10px 0px;
+    padding: 100px;
+    background-image: url(../image/elearn2.jpg);
+    width: 120%;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.indexcenterdata .indexcenteredpicture .intropic h3 {
+    padding-top: 100px;
+}
+
+
+#features h1 {
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    padding: 10px 0px;
+ 
+}
+
+.icon-row1 {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.icon-row1 .ic1 {
+    font-size: 100px;
+    width: 300px;
+    color: orange;
+}
+
+.icon-row1 .ic1 h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row1 .ic2 {
+    font-size: 100px;
+    width: 300px;
+    color: blue;
+}
+
+.icon-row1 .ic2 h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row1 .ic3 {
+    font-size: 100px;
+    width: 300px;
+    color: yellow;
+}
+
+.icon-row1 .ic3 h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row1 p {
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+.icon-row1 .ic1,
+.ic3,
+.ic2 {
+    text-align: center;
+}
+
+.icon-row2 {
+    padding-top: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.icon-row2 .ic4 {
+    font-size: 100px;
+    width: 300px;
+    color: teal;
+}
+
+.icon-row2 .ic4 h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row2 .ic5 {
+    font-size: 100px;
+    width: 300px;
+    color: purple;
+}
+
+.icon-row2 .ic5 h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row2 .ic6 {
+    font-size: 100px;
+    width: 300px;
+    color: lightblue;
+}
+
+.icon-row2 .ic6 h2 {
+    font-size: 30px;
+    color: black;
+}
+
+.icon-row2 p {
+    padding-top: 10px;
+    color: black;
+    font-size: 20px;
+}
+
+.icon-row2 .ic4,
+.ic5,
+.ic6 {
+    text-align: center;
+}
+
+
+.designingbutton .designingbuttondata p {
+    color: black;
+	padding: 15px 0px;
+}
+
+.designingbutton .designingbuttondata .clickbutton button {
+    background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+button{
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+ 
+}
+input{
+    width: 100%;
+    padding: 1%;
+}
+button:hover{
+    background-color:coral
+}
+
+
+.centerdata {
+    widows: 100%;
+    background-color: ivory;
+    padding-top: 70px;
+}
+
+.centerdata .centeredpicture {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.centerdata .centeredpicture .imagesidetext {
+    text-align: left;
+    padding: 30px;
+}
+
+.centerdata .centeredpicture .picture {
+    margin: 10px 0px;
+    padding: 100px;
+    background-image: url(../image/elearn.jpg);
+    width: 60%;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.centerdata .centeredpicture .picture h3 {
+    padding-top: 100px;
+}
+
+
+#headings {
+    width: 90%;
+    margin: 0px auto;
+    position: relative;
+}
+
+#headings h1 {
+    padding: 80px 0px;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+}
+
+.form {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.form .heading {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.form .heading h1 {
+    padding: 10px 0px;
+}
+
+.designingbutton {
+    background-color: aliceblue;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.designingbutton .designingbuttondata {
+	background-color: aliceblue;
+    width: 100%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+.design2 {
+    background-color: lightblue;
+    padding: 20px 0px;
+}
+
+.design2 .design-data2 {
+    width: 80%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+
+.design2 .design-data2 p {
+    color: black;
+    padding: 15px 0px;
+}
+
+.design2 .design-data2 .click2 button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	
+}
+
+.contact-on {
+    background-color: black;
+    padding: 20px 0px;
+}
+
+.contact-on .contact-on-data {
+    width: 80%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: white;
+}
+
+.startupuser .writeup {
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    background-color: #3FD2C7;
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.startupuser .writeup .read button {
+    margin-top: 20px;
+	font-size: 20px;
+	padding: 6px 6px;
+    border: none;
+    background-color: White;
+    color: White;
+}
+
+
+.testimonials {
+    background-color: skin;
+    padding: 60px 0px;
+}
+
+.testimonials .testimonialsdata {
+    width: 80%;
+    margin: 0px auto;
+    padding: 50px 10px;
+    text-align: center;
+    color: Black;
+}
+
+.testimonials .testimonialsdata p {
+    color: Black;
+    padding: 20px 0px;
+}
+
+.testimonials .testimonialsdata .img {
+    background-image: url(../image/logo1.jpg);
+    padding: 5%;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    left: 45%;
+}
+
+.contact-on .contact-on-data .ic i {
+    font-size: 30px;
+    padding: 5px 10px;
+}
+
+.signupform {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.signupform .signupformheader {
+    width: 90%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.signupform .signupformheader h1 {
+    padding: 10px 0px;
+}
+
+.signupform .signupformdata form {
+    width: 60%;
+    margin: 20px auto;
+    text-align: Left;
+}
+
+.signupform .signupformdata .signuptextbox {
+    text-align: center;
+}
+
+.signupform .signupformdata .signuptextbox button {
+    margin: 20px auto;
+    padding: 10px 55px;
+    border: none;
+    border-color: indigo;
+    background-color: indigo;
+    color: white;
+}
+
+.signupdesigningbutton {
+    background-color: aliceblue;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.signupdesigningbutton .signupdesigningbuttondata {
+	background-color: aliceblue;
+    width: 100%;
+    margin: 0px auto;
+    padding: 5px 10px;
+    text-align: center;
+    color: black;
+}
+
+.signupdesigningbutton .signupdesigningbuttondata p {
+    color: black;
+	padding: 15px 0px;
+}
+
+.signupdesigningbutton .signupdesigningbuttondata .signupclickbutton button {
+   
+        background-color: #4CAF50; 
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+     
+    
+}
+.signupdesigningbutton .signupdesigningbuttondata .signupclickbutton button a {
+   
+ text-decoration: none;
+ color: blanchedalmond;
+ 
+
+}
+.signupdesigningbutton .signupdesigningbuttondata .signupclickbutton button :hover {
+   
+   color: brown;
+    
+   
+   }
+   button :hover {
+   
+    color: brown;
+     
+    
+    }
+   
+
+.dataform {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.dataform .dataformdata form {
+    width: 60%;
+    margin: 20px auto;
+    text-align: Left;
+}
