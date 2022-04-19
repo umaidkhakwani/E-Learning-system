@@ -29,6 +29,8 @@
                 <a href="signup.html">SignUp</a>
                 <a href="contactus.html">Contact</a>
 				 <a href="info.html">About</a>
+                 <a href="update-info.php">Update-info</a>
+                 
             </div>
 
 
