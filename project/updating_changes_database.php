@@ -2,7 +2,7 @@
 
 <head>
     <title>
-        udapte-info
+        updating-changes-database
     </title>
     <link rel="stylesheet" href="css/inf.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">

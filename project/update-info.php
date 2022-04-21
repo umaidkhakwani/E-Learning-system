@@ -2,7 +2,7 @@
 
 <head>
     <title>
-        udapte-info
+        update-info
     </title>
     <link rel="stylesheet" href="css/inf.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
