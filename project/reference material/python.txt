@@ -1,0 +1,8 @@
+https://www.edureka.co/blog/variables-and-data-types-in-python/
+
+
+https://python-course.eu/python-tutorial/dictionaries.php#:~:text=But%20what's%20the%20difference%20between,and%20not%20via%20their%20position.
+
+
+
+https://www.w3schools.com/python/python_file_write.asp
