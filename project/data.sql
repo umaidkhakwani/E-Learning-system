@@ -87,3 +87,19 @@ ALTER table user_table ADD feepaid bool;
 UPDATE user_table set feepaid=FALSE where registartiontype=3;
 
 CREATE table attendence( id int, name varchar(25), presence_date DATE , present bool );
+
+
+
+
+
+create table queries(
+id int,
+message varchar(200),
+registration_type int,
+reciever int
+);
+
+
+
+
+create table exam_result( studnet_id int, subject varchar(20), answers varchar(20), marks int NULL, grade varchar(20) null ); 

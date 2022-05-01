@@ -14,7 +14,7 @@
   // Initialize the session
   session_start();
   $dat=$_SESSION['ids'];
- 
+  $password=$_SESSION['pass'];
   
   ?>
 <body>
@@ -52,6 +52,7 @@
            <h2> <?php
                 
                 $nam=$_SESSION['na'];
+                $password=$_SESSION['pass'];
                 echo"<b> HI MR. $nam"
                 
 
@@ -68,59 +69,39 @@
 
     <div id="features">
         <h1>
-            Features
+            Teacher Dashboard
         </h1>
     </div>
 
     <div class="icon-row1">
-        <div class="ic1">
-            <i class="fas fa-book"></i>
-            <h2>multiple courses</h2>
-            <p>
-            signup and register for the course.
-            </p>
+    <?php $id = "$dat";
+              $PASS=$password;
+        
+        ?>
 
-        </div>
-        <div class="ic2">
-			<i class="fas fa-tasks"></i>
-              <h2>weekly plans</h2>
-			<p>
-               weekly classes with activities
-            </p>
-           
-        </div>
-        <div class="ic3">
-            <i class="fas fa-smile"></i>
-            <h2>scholorships</h2>
-            <p>
-                offers scholorships for bright students.
-            </p>
-           
-        </div>
+
+    <form method="post" action="show_queries.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <button type="submit">click me to show queries</button>
+            </form>
+
+            <form method="post" action="register_course_teacher.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <button type="submit">click here to register course</button>
+            </form>
+
+            <form method="post" action="check_exam.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <button type="submit">click here to check exam</button>
+            </form>
+      
     </div>
 
     <div class="icon-row2">
-        <div class="ic4">
-            <i class="fas fa-percent"></i>
-            <h2>special discounts</h2>
-            <p>
-                offers special discounts for the parents works for NGO
-            </p>
-        </div>
-        <div class="ic5">
-            <i class="fas fa-chalkboard-teacher"></i>
-            <h2>Experience faculty</h2>
-            <p>
-               The faculty is well educated.
-            </p>
-        </div>
-        <div class="ic6">
-            <i class="fas fa-school"></i>
-            <h2>well maintained classrooms</h2>
-            <p>
-              offers sperate furnished classrooms for every class.
-            </p>
-        </div>
+       
     </div>
 
     <div class="startupuser">

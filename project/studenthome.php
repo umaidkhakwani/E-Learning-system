@@ -15,6 +15,7 @@
   session_start();
   $dat=$_SESSION['ids'];
   $password=$_SESSION['pass'];
+  $course;
   
   ?>
 <body>
@@ -29,6 +30,7 @@
                 <a href="signup.html">SignUp</a>
                 <a href="contactus.html">Contact</a>
 				 <a href="info.html">About</a>
+                 
             </div>
 
 
@@ -52,9 +54,10 @@
            <h2> <?php
                 
                 $nam=$_SESSION['na'];
-                echo"<b> HI MR. $nam"
+                $password=$_SESSION['pass'];
+                echo"<b> HI MR. $nam";
                 
-
+                
 
             ?></h2>
              
@@ -68,24 +71,121 @@
 		</div>
 
     <div id="features">
+    <div id="galaxy">
+	    <div id="gall">
+		    <div id="pic1">
+			    <img src="image/climb.jpg" height="350" width="500" alt="Image 1">
+			    <a class="previous" href="#pic4">&lt;</a>
+			    <a class="next" href="#pic2">&gt;</a>
+			    <h3>MOTIVATIONAL Quotes</h3>
+			    
+		    </div>
+		    <div id="pic2">
+			    <img src="image/key.jpg" height="350" width="500" alt="Image 2">
+			    <a class="previous" href="#pic1">&lt;</a>
+			    <a class="next" href="#pic3">&gt;</a>
+			    <h3> MOTIVATIONAL Quotes</h3>
+			    
+		    </div>
+		    <div id="pic3">
+			    <img src="image/dream.jpg" height="350" width="500" alt="Image 3">
+			    <a class="previous" href="#pic2">&lt;</a>
+			    <a class="next" href="#pic4">&gt;</a>
+			    <h3>MOTIVATIONAL Quotes</h3>
+			    
+		    </div>
+		    <div id="pic4">
+			    <img src="image/comfort.jpg" height="350" width="500" alt="Image 4">
+			    <a class="previous" href="#pic3">&lt;</a>
+			    <a class="next" href="#pic1">&gt;</a>
+			    <h3>MOTIVATIONAL Quotes</h3>
+			    
+		    </div>
+		   
+	    </div>
+	</div>
         <h1>
             DASHBOARD
         </h1>
+
+         <?php
+                
+                $nam=$_SESSION['na'];
+                $password=$_SESSION['pass'];
+                
+                $con = mysqli_connect("localhost","root","","elearning");
+                if($con){
+                    echo "sucess<br>";
+                    echo"<center><b>$nam DETAILS</b></center><br><br>";
+                
+                    $sql=" select id_assign,NAME,phonenumber,address,dob,gender,cnic,c_id,feepaid from user_table where NAME='$nam' and password='$password';";
+                    $result1 = mysqli_query($con, $sql);
+                    $id;
+                    $name;
+                    $phone;
+                    $addre;
+                    $cnic;
+                    $dob;
+                    $gender;
+
+                    while($row=mysqli_fetch_assoc($result1))
+                        
+                    {
+                        $course=$row['c_id'];
+                        $id=$row['id_assign'];
+                        $name=$row['NAME'];
+                        $phone=$row['phonenumber'];
+                        $addre=$row['address'];
+                        $cnic=$row['cnic'];
+                        $dob=$row['dob'];
+                        $gender=$row['gender'];
+                        echo"<center><b>id : $id</b></center><br>";
+                        echo"<center><b>name : $name </b></center><br>";
+                        echo"<center><b>phonenumber : $phone </b></center><br>";
+                        echo"<center><b>address : $addre </b></center><br>";
+                        echo"<center><b>cnic : $cnic </b></center><br>";
+                        echo"<center><b>date of birth : $dob </b></center><br>";
+                        echo"<center><b>gender : $gender </b></center><br><br>";
+
+                        
+                  
+                    }
+
+
+
+                }
+
+                else{
+
+
+                    echo"not conect to database<br>";
+
+
+
+                }
+                
+                
+                
+
+            ?>
+        
     </div>
 
     <div class="icon-row1">
-        <div class="ic1">
+        
         <?php $id = "$dat";
               $PASS=$password;
-        
+              $cou=$course;
+              
+               
         ?>
             <form method="post" action="registerstudent.php">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
             <button type="submit">click here to register courses</button>
             </form>
-        </div>
-        <div class="ic2">
+       
+    
 
         <form method="post" action="payfee.php">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
@@ -93,27 +193,54 @@
             <button type="submit">click here to pay fee</button>
             </form>
            
-        </div>
-        <div class="ic3">
+        
+        
         <form method="post" action="markattendence.php">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
             <button type="submit">click here mark attendence</button>
             </form>
            
-        </div>
+       
     </div>
 
     <div class="icon-row2">
-        <div class="ic4">
+        
+    <?php $id = "$dat";
+              $PASS=$password;
+              $cou=$course;
+              
+               
+        ?>
+        <form method="post" action="makequery.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <button type="submit">make query</button>
+            </form>
           
-        </div>
-        <div class="ic5">
-           
-        </div>
-        <div class="ic6">
-           
-        </div>
+
+        <form method="post" action="student_showquery.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <button type="submit">show answers</button>
+         </form>
+
+         
+         <form method="post" action="give_exam.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <input type="hidden" name="course" value="<?php echo $cou; ?>">
+            <button type="submit">give exam</button>
+         </form>
+
+         <form method="post" action="coursematerial.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <input type="hidden" name="course" value="<?php echo $cou; ?>">
+            <button type="submit">course material</button>
+         </form>
+         
+      
     </div>
 
     <div class="startupuser">
