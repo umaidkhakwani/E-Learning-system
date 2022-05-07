@@ -102,4 +102,4 @@ reciever int
 
 
 
-create table exam_result( studnet_id int, subject varchar(20), answers varchar(20), marks int NULL, grade varchar(20) null ); 
+create table exam_result( studnet_id int, subject int, answers varchar(20), marks int NULL, grade varchar(20) null ); 
