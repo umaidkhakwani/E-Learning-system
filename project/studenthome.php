@@ -104,6 +104,52 @@
 		   
 	    </div>
 	</div>
+
+    <div id="galaxy">
+	    <div id="gall">
+             <!-- this is notifications box -->
+             <?php
+                    
+                $con = mysqli_connect("localhost","root","","elearning");
+                if($con){
+                    echo "sucess<br>";
+                    echo "<br>";
+                    echo "<hr>";
+                    echo "<br>";
+                    echo "NOTIFICATIONS<br>";
+                    echo "<br>";
+
+                    $sql=" select message from student_notify;";
+                    $result1 = mysqli_query($con, $sql);
+                    
+                    
+
+                    while($row=mysqli_fetch_assoc($result1))
+                        
+                    {
+                        $message=null;
+                        $message=$row['message'];
+                        echo"<center><b>$message</b></center><br>";
+                       
+
+                    }
+
+                }
+
+                else{
+                    echo"not conect to database<br>";
+
+                }
+                
+                
+                
+
+            ?>
+		    
+		    
+		   
+	    </div>
+	</div>
         <h1>
             DASHBOARD
         </h1>
@@ -222,7 +268,7 @@
         <form method="post" action="student_showquery.php">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
-            <button type="submit">show answers</button>
+            <button type="submit">show replies</button>
          </form>
 
          
@@ -238,6 +284,13 @@
             <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
             <input type="hidden" name="course" value="<?php echo $cou; ?>">
             <button type="submit">course material</button>
+         </form>
+
+         <form method="post" action="downloadcertificate.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="hidden" name="pass" value="<?php echo $PASS; ?>">
+            <input type="hidden" name="course" value="<?php echo $cou; ?>">
+            <button type="submit">get certificate</button>
          </form>
          
       

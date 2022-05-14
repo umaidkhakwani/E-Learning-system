@@ -90,7 +90,7 @@
             <h3>type your answer to query here!</h3>
 				<textarea name="textarea" rows="5" cols="30" placeholder="Comment text."></textarea>
 				<h3>enter student ID</h3>
-                <input type="text" id="studentid" name="studentid" placeholder="ID Here" size="40">
+                <input type="text" id="studentid" name="studentid" placeholder="ID Here" size="40" required pattern="{1,100000000}">
 				<br>
 				<br>
                 <br><br>

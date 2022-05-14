@@ -119,11 +119,11 @@
            <form action="check_exam2.php" method= "post">
             
            <h3>enter student id!</h3>
-            <input type="text" id="id" name="id" placeholder="enter id" size="40">
+            <input type="text" id="id" name="id" placeholder="enter id" size="40" required pattern="{1,100000000}">
             <h3>enter marks!</h3>
-            <input type="text" id="marks" name="marks" placeholder="marks" size="40">
+            <input type="number" id="marks" name="marks" placeholder="marks"  min="0" max="100">
 				<h3>enter grade</h3>
-                <input type="text" id="grade" name="grade" placeholder="grade" size="40">
+                <input type="text" id="grade" name="grade" placeholder="grade" size="40" pattern="[A-Za-z]">
 				<br>
 				<br>
                 <br><br>

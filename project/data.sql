@@ -103,3 +103,23 @@ reciever int
 
 
 create table exam_result( studnet_id int, subject int, answers varchar(20), marks int NULL, grade varchar(20) null ); 
+
+
+CREATE table teacher_notify( message varchar(100) );
+
+CREATE table student_notify( message varchar(100) );
+
+insert INTO student_notify values("1. thanks for joinig our LMS");
+insert INTO student_notify values("2. course material has been uplaoded");
+insert INTO student_notify values("3. motivationsl quotes has been uploaded");
+insert INTO student_notify values("4. your attendence has been uplaoded");
+insert INTO student_notify values("5. you can give exam any time");
+insert INTO student_notify values("6. BEST of LUCK");
+
+
+
+
+insert INTO teacher_notify values("1. thanks for joinig our LMS");
+insert INTO teacher_notify values("2. course material has been uplaoded");
+insert INTO teacher_notify values("3. you can check exam any time");
+insert INTO teacher_notify values("4. BEST of LUCK");

@@ -2,7 +2,7 @@
 
 <head>
     <title>
-        make query
+       give exam
     </title>
     <link rel="stylesheet" href="css/inf.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -27,44 +27,77 @@
         </div>
         <div id="headings">
             <h1>
-               make query
+            give exam
             </h1>
         </div>
     </nav>
 	
 	<div class="signupform">
         <div class="signupformheader">
-            <h2>
-                
-            </h2>
+            <h1>
+            </h1>
         </div>
 
         <div class="signupformdata">
-                 <?php
-                    $pass=$_POST['pass'];
-                    $id=$_POST['id'];
-                 ?>
-            <form action="makequery1.php" method= "post">
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <input type="hidden" name="pass" value="<?php echo $pass; ?>">
-            <h3>type your query here!</h3>
-				<textarea name="textarea" rows="5" cols="30" placeholder="Comment text."></textarea>
-				<h3>enter teacher ID</h3>
-                <input type="number" id="teacherid" name="teacherid" placeholder="ID Here" size="40" required pattern="{1,100000000}">
-				<br>
-				<br>
-                <br><br>
-                <button type="submit" name="submit" > Submit</button>
-                
-            </form>
-			
-            <div class="signuptextbox">
-                
-                
-            </div>
+           <?php
+
+        
+
+        $con = mysqli_connect("localhost","root","","elearning");
+            $id=$_POST['id'];
+            $pass=$_POST['pass'];
+           $course=$_POST['course'];
+           
+           if($con){
+               echo "sucess<br>";
+              
+               $sql=" select marks from exam_result where studnet_id='$id' and subject='$course';";
+               $result1 = mysqli_query($con, $sql);
+               
+               $mark=0;
+               $check=false;
+               while($row=mysqli_fetch_assoc($result1))
+                   
+               {
+                   
+                   $mark=$row['marks'];
+                   echo"<center><b>$mark</b></center><br>";
+                   if($mark>=40){
+                    $check=true;
+                    break;
+                   }
+                  
+                   
+                  
+
+               }
+
+               if($check==true){
+                header("Location: downloadcertificate1.html");
 
 
+               }
+               else{
+                echo"<center><b>your marks are not enough to get certificate..</b></center><br>";
 
+
+               }
+
+           }
+
+           else{
+               echo"not conect to database<br>";
+
+           }
+           
+           
+            
+           
+        
+
+           ?>     
+           
+         
         </div>
     </div>
 

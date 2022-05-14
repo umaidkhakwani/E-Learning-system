@@ -68,6 +68,51 @@
 		</div>
 
     <div id="features">
+    <div id="galaxy">
+	    <div id="gall">
+             <!-- this is notifications box -->
+             <?php
+                    
+                $con = mysqli_connect("localhost","root","","elearning");
+                if($con){
+                    echo "sucess<br>";
+                    echo "<br>";
+                    echo "<hr>";
+                    echo "<br>";
+                    echo "NOTIFICATIONS<br>";
+                    echo "<br>";
+
+                    $sql=" select message from teacher_notify;";
+                    $result1 = mysqli_query($con, $sql);
+                    
+                    
+
+                    while($row=mysqli_fetch_assoc($result1))
+                        
+                    {
+                        $message=null;
+                        $message=$row['message'];
+                        echo"<center><b>$message</b></center><br>";
+                       
+
+                    }
+
+                }
+
+                else{
+                    echo"not conect to database<br>";
+
+                }
+                
+                
+                
+
+            ?>
+		    
+		    
+		   
+	    </div>
+	</div>
         <h1>
             Teacher Dashboard
         </h1>
@@ -78,7 +123,7 @@
               $PASS=$password;
         
         ?>
-
+    
 
     <form method="post" action="show_queries.php">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
