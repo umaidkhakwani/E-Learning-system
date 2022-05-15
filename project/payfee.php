@@ -39,7 +39,7 @@
             </h2>
         </div>
 
-        <div class="signupformdata">
+        <div class="signupformdata payyourfee">
                  <?php
                     $pass=$_POST['pass'];
                     $id=$_POST['id'];
@@ -48,9 +48,9 @@
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <input type="hidden" name="pass" value="<?php echo $pass; ?>">
             <!-- <h3>tick to pay fee</h3> -->
-            <input type="checkbox" id="pay fee" name="paid" value="paid">
+            <input type="checkbox" id="payfee" name="paid" value="paid" required>
                 <br><br>
-                <button type="submit" name="submit" > Submit</button>
+                <button type="submit" name="submit" class="payfeebtn" style="margin-left: 44%;"> Submit</button>
                 
             </form>
 			

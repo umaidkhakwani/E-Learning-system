@@ -66,12 +66,12 @@
                         
                         </tr> ";
                         
-                         
+                         $checkingdata=false;
                         
                         while($row = mysqli_fetch_array($result1))
                         
                           {
-                        
+                            $checkingdata=true;
                           echo "<tr>";
                         
                           echo "<td>" . $row['id_assign'] . "</td>";
@@ -86,11 +86,20 @@
                           echo "</tr>";
                         
                           }
+
                         
                         echo "</table></center>";
-                          
+                          if($checkingdata==false){
+                            echo"<br>";
+                            echo"no data exists";
+                            // usleep(3000000);
+                            header( "refresh:2;url=update-info.php" );
+
+                            // header("Location: update-info.php");
+
+                          }
                         echo"<br>";
-                      
+                          
                           
                           mysqli_close($con);
                        

@@ -47,7 +47,7 @@
         $id=$_POST['id'];
         $course=$_POST['course'];
         ?>
-        <div class="signupformdata">
+        <div class="signupformdata payclassform">
             <form action="updateexamquery.php" method= "post">
                  <input type="hidden" name="id" value="<?php echo $id; ?>">
             

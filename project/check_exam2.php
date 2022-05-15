@@ -59,27 +59,43 @@
                 $grade=$_POST['grade'];
                 
                 
+                $sql = "select studnet_id from exam_result where studnet_id='$id' ";
+                $result1 = mysqli_query($con, $sql);
+                $checking=false;
                 
                 
-               
+                
+                while($row=mysqli_fetch_assoc($result1))
+                {
+                $checking=true;
+                }
                        
-                        
+                        if($checking==true){
+                            $sql = "UPDATE exam_result SET marks='$marks' ,grade='$grade' where studnet_id='$id' ";
+                            if ($con->query($sql) === TRUE) 
+                            {
+                                // echo "Record updated successfully";
+                                echo '<div align="center">' ."Record updated successfully<br>" .'</div>';
+                                
+                                
+                               
+                            } 
+                            else{
+
+                                    echo"error";
+
+                            }
+
+                        }
+                        else
+                        {
+                            
+                            echo"the student is not found in exam table";
+
+                        }
                             
                             
-                                $sql = "UPDATE exam_result SET marks='$marks' ,grade='$grade' where studnet_id='$id' ";
-                                if ($con->query($sql) === TRUE) 
-                                {
-                                    // echo "Record updated successfully";
-                                    echo '<div align="center">' ."Record updated successfully<br>" .'</div>';
-                                    
-                                    
-                                   
-                                } 
-                                else{
-
-                                        echo"error";
-
-                                }
+                               
             
                                   
             }
