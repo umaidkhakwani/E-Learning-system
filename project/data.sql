@@ -123,3 +123,30 @@ insert INTO teacher_notify values("1. thanks for joinig our LMS");
 insert INTO teacher_notify values("2. course material has been uplaoded");
 insert INTO teacher_notify values("3. you can check exam any time");
 insert INTO teacher_notify values("4. BEST of LUCK");
+
+
+
+insert into user_table values(12345,"hanzla sibghat","03121603144","male","2015-02-01","sibghat ullah","house no 313 subzawari town ",2,1234,"5440056432",126,0);
+insert into user_table values(12346,"bilal","0335678904","male","2015-02-10","bill","lahore ",2,2356,"177867654",123,0);
+insert into user_table values(12347,"waqas","0345678455","male","2010-02-01","ahmad","sahiwal ",2,3456,"3630207666",130,0);
+insert into user_table values(12348,"umaid","0347867566","male","2008-02-01","khan","multan ",2,9008,"67898756",128,0);
+
+
+
+
+insert into user_table values(12349,"Mirza ahmad","0345676786","male","2011-02-01","mirza ghalib","Sahiwal",3,1234,"36302456789",126,1);
+insert into user_table values(12310,"ahmad arif","035678969","male","2010-02-10","arif","multan ",3,2356,"145678976",126,1);
+insert into user_table values(12311,"saad jilani","02345675","male","2007-02-01","jilani","multan ",3,3456,"12345677889",130,1);
+insert into user_table values(12312,"fozan","03426789","female","2006-02-01","5g","jhelum ",3,9008,"5678678898",128,1);
+
+
+
+insert into accounts values("36302456789",8765,50000);
+insert into accounts values("145678976",1234,50000);
+insert into accounts values("12345677889",7777,50000);
+insert into accounts values("5678678898",8888,50000);
+
+insert into passedcourses values(12349,126);
+insert into passedcourses values(12310,126);
+insert into passedcourses values(12311,130);
+insert into passedcourses values(12312,128);

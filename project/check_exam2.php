@@ -91,6 +91,8 @@
                         {
                             
                             echo"the student is not found in exam table";
+                            header( "refresh:2;url=teacherhome.php" );
+                            exit();
 
                         }
                             

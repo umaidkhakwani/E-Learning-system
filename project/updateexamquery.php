@@ -68,6 +68,10 @@
                 if ($con->query($sql) === TRUE) {
                     
                     echo '<div align="center">' ."succesfull query" .'</div>';
+                   
+                    header( "refresh:2;url=studenthome.php" );
+                    exit();
+                   
                   } else {
                     echo "Error: " . $sql . "<br>" . $con->error;
                   }

@@ -59,17 +59,24 @@
                 $result1 = mysqli_query($con, $sql);
                 $student_id;
                     $message;
-                  
+                  $checkexisting=false;
                     while($row=mysqli_fetch_assoc($result1))
                         
                     {
                         $student_id=$row['id'];
                         $message=$row['message'];
-                       
+                       $checkexisting=true;
                         echo"<center><b>teacher id : $student_id</b></center>";
                         echo"<center><b>message : $message </b></center><br>";
                         echo"<center>-----------------------------------</center><br>";
                     
+                    }
+
+                    if($checkexisting==false){
+                        echo"<center><b>no replies found</b></center>";
+                        header( "refresh:2;url=studenthome.php" );
+                        exit();
+
                     }
                 
             
@@ -89,7 +96,7 @@
             <input type="hidden" name="pass" value="<?php echo $pass; ?>">
             <h3>type your answer to query here!</h3>
 				<textarea name="textarea" rows="5" cols="30" placeholder="Comment text."></textarea>
-				<h3>enter student ID</h3>
+				<h3>enter teacher ID</h3>
                 <input type="text" id="studentid" name="studentid" placeholder="ID Here" size="40" required pattern="{1,100000000}">
 				<br>
 				<br>

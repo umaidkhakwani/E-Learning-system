@@ -59,11 +59,12 @@
                 
 
                 
-                $sql=" select c_id,cnic,registartiontype,NAME from user_table where id_assign='$id' and password='$pass' ;";
+                $sql=" select c_id,cnic,registartiontype,NAME,feepaid from user_table where id_assign='$id' and password='$pass' ;";
                 $result1 = mysqli_query($con, $sql);
                 
                 $checkcourse=False;
                 $cnicnum=NULL;
+                $feepaid=0;
                 while($row=mysqli_fetch_assoc($result1))
                 {
                     $cnicnum=$row['cnic'];
@@ -71,10 +72,17 @@
                     $typereg=$row['registartiontype'];
                     $checkcourse=true;
                     $course=$row['c_id'];
+                    $feepaid=$row['feepaid'];
 
                     
                 }
-               
+               if($feepaid==1){
+                echo"<center>FEE IS ALREADY PAID</center>";
+                header( "refresh:2;url=studenthome.php" );
+                exit();
+
+               }
+            
                 if($checkcourse==False)
                 {
                     echo"not registered in any course<br>";

@@ -163,6 +163,8 @@
                                 {
                                     // echo"prereg is not cleared yet<br>";
                                     echo '<div align="center">' ."prereg is not cleared yet<br>" .'</div>';
+                                    header( "refresh:2;url=studenthome.php" );
+                                    exit();
                                 }
 
                             }
@@ -174,6 +176,9 @@
                     {
                         // echo"user is already registered in course code : $course";
                         echo '<div align="center">' ."user is already registered in course code : $course" .'</div>';
+                       
+                header( "refresh:2;url=studenthome.php" );
+                exit();
                     }
                         
 

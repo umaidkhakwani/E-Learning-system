@@ -94,7 +94,7 @@
                             echo"no data exists";
                             // usleep(3000000);
                             header( "refresh:2;url=update-info.php" );
-
+                            exit();
                             // header("Location: update-info.php");
 
                           }

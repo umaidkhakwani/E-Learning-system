@@ -51,13 +51,13 @@
             echo"$id";
             if($con){
             
-                
-                
                 $sql = "insert into queries (id,message,registration_type,reciever)
                 VALUES ('$id','$message',2,'$sendto')";
                 if ($con->query($sql) === TRUE) {
                     
                     echo '<div align="center">' ."succesfull query" .'</div>';
+                    header( "refresh:2;url=studenthome.php" );
+                    exit();
                   } else {
                     echo "Error: " . $sql . "<br>" . $con->error;
                   }

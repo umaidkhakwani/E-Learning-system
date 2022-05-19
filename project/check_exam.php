@@ -81,13 +81,14 @@
                 $sub;
                 
                 
-                
+                $checkexist=false;
                 while($row=mysqli_fetch_assoc($result1))
                 {
+                    $checkexist=true;
                     $s_id=$row['studnet_id'];
                     $sub=$row['subject'];
                     $ans=$row['answers'];
-
+                    
                     echo"<center><b>student id : $s_id</b></center>";
                     echo"<center><b>subject : $sub </b></center><br>";
                     echo"<center><b>answers : $ans </b></center><br>";
@@ -96,11 +97,12 @@
                  
                     
                 }
+                if($checkexist==false){
+                    echo"<center><b>students have not given the exam yet</center>";
+                    header( "refresh:3;url=teacherhome.php" );
+                    exit();
 
-
-                
-                
-                                  
+                }                 
             }
             else
             {

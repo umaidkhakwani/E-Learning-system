@@ -79,6 +79,8 @@
                }
                else{
                 echo"<center><b>your marks are not enough to get certificate..</b></center><br>";
+                header( "refresh:2;url=studenthome.php" );
+                exit();
 
 
                }

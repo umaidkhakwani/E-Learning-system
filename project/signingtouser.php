@@ -96,7 +96,9 @@
     
                 }
                 else{
-                    echo"user not found";
+                    echo"<center>user not found</center>";
+                    header( "refresh:2;url=signinpage.html" );
+                    exit();
                 }
 
                

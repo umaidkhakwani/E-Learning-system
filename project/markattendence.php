@@ -63,6 +63,8 @@
                 if ($con->query($sql) === TRUE) {
                     
                     echo '<div align="center">' ."Attendence is marked suucesfully...." .'</div>';
+                    header( "refresh:2;url=studenthome.php" );
+                    exit();
                   } else {
                     echo "Error: " . $sql . "<br>" . $con->error;
                   }
