@@ -50,7 +50,7 @@
         
             $id=$_POST['id'];
             $pass=$_POST['pass'];
-            echo"$id";
+            // echo"$id";
             $con = mysqli_connect("localhost","root","","elearning");
     
             if($con)
@@ -59,10 +59,11 @@
                 $result1 = mysqli_query($con, $sql);
                 $student_id;
                     $message;
-                  
+                  $checkexist=false;
                     while($row=mysqli_fetch_assoc($result1))
                         
                     {
+                        $checkexist=true;
                         $student_id=$row['id'];
                         $message=$row['message'];
                        
@@ -70,6 +71,12 @@
                         echo"<center><b>message : $message </b></center><br>";
                         echo"<center>-----------------------------------</center><br>";
                     
+                    }
+
+                    if($checkexist==false){
+                        echo '<div align="center">' ."not found any query" .'</div>';
+                        header( "refresh:2;url=teacherhome.php" );
+                        exit();
                     }
                 
             

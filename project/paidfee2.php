@@ -122,6 +122,10 @@
                         // echo "Record updated successfully";
                         // echo"fee is succesfull paid<br>";
                         echo '<div align="center">' ."fee is succesfull paid<br>" .'</div>';
+                      
+       
+                        header( "refresh:2;url=studenthome.php" );
+                        exit();
                         
     
                       } else {

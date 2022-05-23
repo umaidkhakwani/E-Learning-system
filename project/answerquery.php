@@ -50,7 +50,9 @@
             $sendto=$_POST['studentid'];
             echo"$id";
             if($con){
-            
+                
+                
+
                 $sql = "insert into queries (id,message,registration_type,reciever)
                 VALUES ('$id','$message',2,'$sendto')";
                 if ($con->query($sql) === TRUE) {

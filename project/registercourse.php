@@ -110,6 +110,10 @@
                                     {
                                         // echo "Record updated successfully in pased courses";
                                         echo '<div align="center">' ."Record updated successfully in pased courses<br>" .'</div>';
+                                        // echo '<div align="center">' ."user is already registered in course code : $course" .'</div>';
+                       
+                                        header( "refresh:2;url=studenthome.php" );
+                                        exit();
                                       
                                     } 
                                     else 
@@ -147,6 +151,10 @@
                                         {
                                             // echo "Record updated successfully in pased courses";
                                             echo '<div align="center">' ."Record updated successfully in pased courses<br>" .'</div>';
+                                            // echo '<div align="center">' ."user is already registered in course code : $course" .'</div>';
+                       
+                                            header( "refresh:2;url=studenthome.php" );
+                                            exit();
                                           
                                         } 
                                         else 
